@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "expo-starter",
-    "slug": "expo-starter",
+    "name": "fitness-app-demo",
+    "slug": "fitness-app-demo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "expostarter",
+    "scheme": "trimlydemo",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

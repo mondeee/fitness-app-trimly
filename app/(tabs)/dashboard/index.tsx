@@ -1,0 +1,64 @@
+// screens/dashboard/DashboardScreen.tsx
+import AddMealCard from '@/components/cards/AddMealCard';
+import InsightCard from '@/components/cards/InsightCard';
+import { MacroCard } from '@/components/cards/MacroCard';
+import { MealCard } from '@/components/cards/MealCard';
+import { dashboard } from '@/data/mock';
+import { ScrollView, Text, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+export default function DashboardScreen() {
+  const insets = useSafeAreaInsets();
+
+  const { calories, macros, meals } = dashboard;
+
+  return (
+    <View className="flex-1 bg-black" style={{ paddingTop: insets.top }}>
+      <ScrollView className="flex-1 px-4">
+        {/* 🔥 Header */}
+        <View className="flex-row justify-between items-center mb-6">
+          <View className="w-10 h-10 rounded-full bg-gray-700" />
+          <Text className="text-orange-500 text-xl font-black tracking-widest">
+            TRIMLY
+          </Text>
+          <Text className="text-white text-xl">🔔</Text>
+        </View>
+
+        {/* 🔥 Calories */}
+        <Text className="text-orange-400 text-xs tracking-widest mb-1">
+          DAILY FUEL
+        </Text>
+
+        <Text className="text-white text-5xl font-black">
+          {calories.consumed}
+          <Text className="text-gray-400 text-xl"> / {calories.goal} kcal</Text>
+        </Text>
+
+        {/* 🔥 Macros */}
+        <View className="mt-6">
+          {macros.map((m, i) => (
+            <MacroCard key={i} item={m} />
+          ))}
+        </View>
+
+        {/* 🔥 Fuel Log Header */}
+        <View className="flex-row justify-between items-center mt-6 mb-2">
+          <Text className="text-white text-xl font-black">FUEL LOG</Text>
+          <Text className="text-orange-400 text-xs">HISTORY →</Text>
+        </View>
+
+        {/* 🔥 Meals */}
+        {meals.map(meal => (
+          <MealCard key={meal.id} meal={meal} />
+        ))}
+
+        <AddMealCard />
+
+        {/* 🔥 Insight */}
+        <InsightCard />
+
+        <View className="h-10" />
+      </ScrollView>
+    </View>
+  );
+}

@@ -15,15 +15,35 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="dashboard/index"
         options={{
-          title: 'Home',
+          title: 'Dashboard',
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="foodsearch/index"
         options={{
-          title: 'Explore',
+          title: 'Food Search',
+        }}
+      />
+      <Tabs.Screen
+        name="logmeal/index"
+        options={{
+          title: 'Log Meal',
+        }}
+      />
+
+      <Tabs.Screen
+        name="progress/index"
+        options={{
+          title: 'Progress',
+        }}
+      />
+
+      <Tabs.Screen
+        name="index"
+        options={{
+          href: null,
         }}
       />
     </Tabs>
