@@ -11,12 +11,12 @@ export default function FoodSearchScreen() {
   const [active, setActive] = useState('All');
   const insets = useSafeAreaInsets();
   return (
-    <View className="flex-1 bg-black" style={{ paddingTop: insets.top }}>
+    <View className="flex-1 bg-black" style={ { paddingTop: insets.top } }>
       <ScrollView className="px-4">
-        {/* 🔥 Header (Pixel-focused) */}
+        {/* 🔥 Header (Pixel-focused) */ }
         <Header />
 
-        {/* 🔍 Search Bar */}
+        {/* 🔍 Search Bar */ }
         <View className="bg-[#111111] rounded-full px-5 py-4 flex-row items-center mb-4">
           <Text className="text-gray-500 mr-3">🔍</Text>
           <TextInput
@@ -26,36 +26,36 @@ export default function FoodSearchScreen() {
           />
         </View>
 
-        {/* 🧩 Filters */}
+        {/* 🧩 Filters */ }
         <ScrollView
           horizontal
-          showsHorizontalScrollIndicator={false}
+          showsHorizontalScrollIndicator={ false }
           className="mb-6"
         >
-          {filters.map(f => (
+          { filters.map(f => (
             <FilterChip
-              key={f}
-              label={f}
-              active={active === f}
-              onPress={() => {
+              key={ f }
+              label={ f }
+              active={ active === f }
+              onPress={ () => {
                 setActive(f);
                 // empty for now
-              }}
+              } }
             />
-          ))}
+          )) }
         </ScrollView>
 
-        {/* 🔥 Section Title */}
+        {/* 🔥 Section Title */ }
         <Text className="text-gray-500 tracking-widest mb-4">
           POPULAR MATCHES
         </Text>
 
-        {/* 🍱 Food List */}
-        {foods.map(item => (
-          <FoodCard key={item.id} item={item} />
-        ))}
+        {/* 🍱 Food List */ }
+        { foods.map(item => (
+          <FoodCard key={ item.id } item={ item } />
+        )) }
 
-        {/* 🔥 Bottom Actions */}
+        {/* 🔥 Bottom Actions */ }
         <View className="flex-row mt-4">
           <View className="flex-1 bg-[#2A1E18] rounded-3xl p-5 mr-3">
             <Text className="text-2xl mb-3">🍴</Text>
