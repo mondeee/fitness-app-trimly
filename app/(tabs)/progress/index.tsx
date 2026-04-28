@@ -34,9 +34,10 @@ export default function ProgressScreen() {
 
   return (
     <View className="flex-1 bg-black" style={{ paddingTop: insets.top }}>
+      <Header />
+
       <ScrollView className="px-4">
         {/* 🔥 Header */}
-        <Header />
 
         {/* 🔥 Title */}
         <Text className="text-white text-2xl font-bold mb-4">Progress</Text>

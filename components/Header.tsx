@@ -4,7 +4,7 @@ import { Image, Text, View } from 'react-native';
 
 export const Header = () => {
   return (
-    <View className="flex-row items-center justify-between mb-6">
+    <View className="flex-row items-center justify-between mb-6 px-6">
       {/* Avatar */}
       <View className="w-10 h-10 rounded-full bg-gray-600 overflow-hidden">
         <Image

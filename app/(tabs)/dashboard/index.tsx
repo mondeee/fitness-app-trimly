@@ -14,45 +14,45 @@ export default function DashboardScreen() {
   const { calories, macros, meals } = dashboard;
 
   return (
-    <View className="flex-1 bg-black" style={ { paddingTop: insets.top } }>
+    <View className="flex-1 bg-black" style={{ paddingTop: insets.top }}>
+      <Header />
       <ScrollView className="flex-1 px-4">
-        {/* 🔥 Header */ }
-        <Header />
+        {/* 🔥 Header */}
 
-        {/* 🔥 Calories */ }
+        {/* 🔥 Calories */}
         <Text className="text-orange-400 text-xs tracking-widest mb-1">
           DAILY FUEL
         </Text>
 
         <Text className="text-white text-6xl font-black">
-          { calories.consumed }
+          {calories.consumed}
           <Text className="text-gray-400 text-2xl">
-            { ' ' }
-            / { calories.goal } kcal
+            {' '}
+            / {calories.goal} kcal
           </Text>
         </Text>
 
-        {/* 🔥 Macros */ }
+        {/* 🔥 Macros */}
         <View className="mt-6">
-          { macros.map((m, i) => (
-            <MacroCard key={ i } item={ m } />
-          )) }
+          {macros.map((m, i) => (
+            <MacroCard key={i} item={m} />
+          ))}
         </View>
 
-        {/* 🔥 Fuel Log Header */ }
+        {/* 🔥 Fuel Log Header */}
         <View className="flex-row justify-between items-center mt-6 mb-2">
           <Text className="text-white text-xl font-black">FUEL LOG</Text>
           <Text className="text-orange-400 text-xs">HISTORY →</Text>
         </View>
 
-        {/* 🔥 Meals */ }
-        { meals.map(meal => (
-          <MealCard key={ meal.id } meal={ meal } />
-        )) }
+        {/* 🔥 Meals */}
+        {meals.map(meal => (
+          <MealCard key={meal.id} meal={meal} />
+        ))}
 
         <AddMealCard />
 
-        {/* 🔥 Insight */ }
+        {/* 🔥 Insight */}
         <InsightCard />
 
         <View className="h-44" />

@@ -12,9 +12,10 @@ export default function FoodSearchScreen() {
   const insets = useSafeAreaInsets();
   return (
     <View className="flex-1 bg-black" style={{ paddingTop: insets.top }}>
+      <Header />
+
       <ScrollView className="px-4">
         {/* 🔥 Header (Pixel-focused) */}
-        <Header />
 
         {/* 🔍 Search Bar */}
         <View className="bg-[#111111] rounded-full px-5 py-4 flex-row items-center mb-4">
