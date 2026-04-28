@@ -7,18 +7,18 @@ export const WeeklyCaloriesChart = ({ data }) => {
   return (
     <View className="bg-[#111111] rounded-3xl p-4">
       <LineChart
-        data={ {
+        data={{
           labels: data.labels,
           datasets: [{ data: data.values }],
-        } }
-        width={ screenWidth - 32 }
-        height={ 220 }
+        }}
+        width={screenWidth - 32}
+        height={220}
         yAxisSuffix=""
         withDots
-        withShadow={ false }
-        withInnerLines={ false }
-        withOuterLines={ false }
-        chartConfig={ {
+        withShadow={false}
+        withInnerLines={false}
+        withOuterLines={false}
+        chartConfig={{
           backgroundGradientFrom: '#111111',
           backgroundGradientTo: '#111111',
           decimalPlaces: 0,
@@ -29,11 +29,11 @@ export const WeeklyCaloriesChart = ({ data }) => {
             strokeWidth: '2',
             stroke: '#FB923C',
           },
-        } }
+        }}
         bezier
-        style={ {
+        style={{
           borderRadius: 16,
-        } }
+        }}
       />
     </View>
   );

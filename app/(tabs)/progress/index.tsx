@@ -1,9 +1,10 @@
 import { ScrollView, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { ProgressInsightCard } from '@/components/cards/ProgressInsightCard';
 import { StatCard } from '@/components/cards/StatCard';
-import { WeeklyCaloriesChart } from '@/components/charts/WeeklyCaloriesChart';
+import { StreakCard } from '@/components/cards/StreakCard';
+import { WeeklyCaloriesBars } from '@/components/charts/WeeklyCaloriesBar';
+import { WeightTrendChart } from '@/components/charts/WeightTrendChart';
 import Header from '@/components/Header';
 
 // ----------------------
@@ -32,34 +33,30 @@ export default function ProgressScreen() {
   const insets = useSafeAreaInsets();
 
   return (
-    <View
-      className="flex-1 bg-black"
-      style={ { paddingTop: insets.top } }
-    >
+    <View className="flex-1 bg-black" style={{ paddingTop: insets.top }}>
       <ScrollView className="px-4">
-
-        {/* 🔥 Header */ }
+        {/* 🔥 Header */}
         <Header />
 
-        {/* 🔥 Title */ }
-        <Text className="text-white text-2xl font-bold mb-4">
-          Progress
-        </Text>
+        {/* 🔥 Title */}
+        <Text className="text-white text-2xl font-bold mb-4">Progress</Text>
+        <StreakCard />
 
-        {/* 📈 Chart */ }
-        <WeeklyCaloriesChart data={ weeklyData } />
+        {/* 📈 Chart */}
+        <WeeklyCaloriesBars />
+        <WeightTrendChart />
+        {/* <WeeklyCaloriesChart data={weeklyData} /> */}
 
-        {/* 📊 Stats */ }
+        {/* 📊 Stats */}
         <View className="flex-row mt-6">
-          <StatCard label="Avg Calories" value={ stats.avgCalories } />
-          <StatCard label="Consistency" value={ stats.consistency } highlight />
-          <StatCard label="Avg Protein" value={ stats.proteinAvg } />
+          <StatCard label="Avg Calories" value={stats.avgCalories} />
+          <StatCard label="Consistency" value={stats.consistency} highlight />
         </View>
 
-        {/* 🧠 Insight */ }
-        <ProgressInsightCard text={ insight } />
+        {/* 🧠 Insight */}
+        {/* <ProgressInsightCard text={insight} /> */}
 
-        <View className="h-10" />
+        <View className="h-44" />
       </ScrollView>
     </View>
   );

@@ -3,7 +3,7 @@ import { Pressable, Text, View } from 'react-native';
 
 export const InsightCard = () => {
   return (
-    <View className="bg-orange-500 rounded-3xl p-6 mt-6">
+    <View className="bg-primary rounded-3xl p-6 mt-6">
       <Text className="text-black text-2xl font-black mb-2">KILLING IT!</Text>
 
       <Text className="text-black text-sm mb-4">

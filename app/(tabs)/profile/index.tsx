@@ -1,17 +1,15 @@
 // screens/food/LogMealScreen.tsx
-import AppButton from '@/components/ui/AppButton';
 import { Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-export default function LogMealScreen() {
+export default function ProfileScreen() {
   const insets = useSafeAreaInsets();
   return (
     <View className="flex-1 bg-black p-4" style={ { paddingTop: insets.top } }>
-      <Text className="text-white text-xl mb-4">Log Meal</Text>
+      <Text className="text-white text-xl mb-4">ProfileScreen</Text>
 
       {/* Food list placeholder */ }
 
-      <AppButton title="Save Meal" onPress={ () => { } } />
     </View>
   );
 }

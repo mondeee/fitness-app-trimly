@@ -55,7 +55,7 @@ export default function DashboardScreen() {
         {/* 🔥 Insight */ }
         <InsightCard />
 
-        <View className="h-10" />
+        <View className="h-44" />
       </ScrollView>
     </View>
   );
