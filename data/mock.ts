@@ -39,7 +39,7 @@ export const dashboard = {
       label: 'Fat',
       value: 42,
       goal: 65,
-      percent: 65,
+      percent: 12,
       color: '#FBBF24',
     },
   ],
@@ -67,3 +67,29 @@ export const dashboard = {
     },
   ],
 };
+
+export const filters = ['All', 'Recent', 'Favorites', 'Custom'];
+
+export const foods = [
+  {
+    id: '1',
+    name: 'Avocado',
+    subtitle: '1 medium (150g)',
+    calories: 240,
+    image: 'https://picsum.photos/200?1',
+  },
+  {
+    id: '2',
+    name: 'Chicken Breast',
+    subtitle: 'Cooked, 200g',
+    calories: 330,
+    image: 'https://picsum.photos/200?2',
+  },
+  {
+    id: '3',
+    name: 'Brown Rice',
+    subtitle: '1 cup, steamed',
+    calories: 216,
+    image: 'https://picsum.photos/200?3',
+  },
+];

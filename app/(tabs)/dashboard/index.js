@@ -7,14 +7,10 @@ import Header from '@/components/Header';
 import { dashboard } from '@/data/mock';
 import { ScrollView, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-
 export default function DashboardScreen() {
-  const insets = useSafeAreaInsets();
-
-  const { calories, macros, meals } = dashboard;
-
-  return (
-    <View className="flex-1 bg-black" style={{ paddingTop: insets.top }}>
+    const insets = useSafeAreaInsets();
+    const { calories, macros, meals } = dashboard;
+    return (<View className="flex-1 bg-black" style={{ paddingTop: insets.top }}>
       <ScrollView className="flex-1 px-4">
         {/* 🔥 Header */}
         <Header />
@@ -34,9 +30,7 @@ export default function DashboardScreen() {
 
         {/* 🔥 Macros */}
         <View className="mt-6">
-          {macros.map((m, i) => (
-            <MacroCard key={i} item={m} />
-          ))}
+          {macros.map((m, i) => (<MacroCard key={i} item={m}/>))}
         </View>
 
         {/* 🔥 Fuel Log Header */}
@@ -46,17 +40,14 @@ export default function DashboardScreen() {
         </View>
 
         {/* 🔥 Meals */}
-        {meals.map(meal => (
-          <MealCard key={meal.id} meal={meal} />
-        ))}
+        {meals.map(meal => (<MealCard key={meal.id} meal={meal}/>))}
 
         <AddMealCard />
 
         {/* 🔥 Insight */}
         <InsightCard />
 
-        <View className="h-10" />
+        <View className="h-10"/>
       </ScrollView>
-    </View>
-  );
+    </View>);
 }

@@ -8,7 +8,7 @@ module.exports = {
         primary: '#22C55E',
         primaryDark: '#16A34A',
         background: '#0F172A',
-        card: '#1E293B',
+        card: '#1f2020',
         text: '#E2E8F0',
         subtext: '#94A3B8',
         danger: '#EF4444',
