@@ -14,7 +14,7 @@ export default function DashboardScreen() {
   const { calories, macros, meals } = dashboard;
 
   return (
-    <View className="flex-1 bg-black" style={{ paddingTop: insets.top }}>
+    <View className="flex-1" style={{ paddingTop: insets.top }}>
       <Header />
       <ScrollView className="flex-1 px-4">
         {/* 🔥 Header */}
