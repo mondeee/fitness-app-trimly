@@ -11,7 +11,6 @@ export default function TabLayout() {
     >
       <Tabs.Screen name="dashboard/index" />
       <Tabs.Screen name="foodsearch/index" />
-      <Tabs.Screen name="logmeal/index" />
       <Tabs.Screen name="progress/index" />
       <Tabs.Screen name="profile/index" />
       <Tabs.Screen

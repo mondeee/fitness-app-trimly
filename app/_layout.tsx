@@ -13,8 +13,12 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
-          name="modal"
-          options={{ presentation: 'modal', title: 'Modal' }}
+          name="logmeal/index"
+          options={{
+            presentation: 'fullScreenModal',
+            animation: 'slide_from_bottom',
+            headerShown: false,
+          }}
         />
       </Stack>
     </AppProvider>

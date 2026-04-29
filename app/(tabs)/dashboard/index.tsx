@@ -4,14 +4,28 @@ import InsightCard from '@/components/cards/InsightCard';
 import { MacroCard } from '@/components/cards/MacroCard';
 import { MealCard } from '@/components/cards/MealCard';
 import Header from '@/components/Header';
+import { DashboardSkeleton } from '@/components/skeleton/DashBoardSkeleton';
 import { dashboard } from '@/data/mock';
+import { useEffect, useState } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function DashboardScreen() {
   const insets = useSafeAreaInsets();
-
+  const [loading, setLoading] = useState(true);
   const { calories, macros, meals } = dashboard;
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <DashboardSkeleton />;
+  }
 
   return (
     <View className="flex-1" style={{ paddingTop: insets.top }}>

@@ -93,3 +93,25 @@ export const foods = [
     image: 'https://picsum.photos/200?3',
   },
 ];
+
+export const MEAL_DATA = {
+  name: 'Grilled Chicken',
+  category: 'Protein Hero',
+  imageUrl:
+    'https://media.istockphoto.com/id/1978764024/photo/grilled-chicken-breast-whole-and-sliced-on-a-cutting-board-with-lemon.jpg?s=2048x2048&w=is&k=20&c=7VxJJd85lnPbZT5Lil1gplveIT7OqWeBK1IA7xugKDc=',
+  kcal: 284,
+  macros: {
+    protein: { value: 52, color: '#FF6B2C' },
+    carbs: { value: 0, color: '#94A3B8' },
+    fats: { value: 6, color: '#EAB308' },
+  },
+  servingOptions: [100, 250, 500, 1000],
+  defaultServing: 250,
+  micronutrients: [
+    { name: 'Sodium', amount: 74, unit: 'mg', dailyPercent: 3 },
+    { name: 'Potassium', amount: 256, unit: 'mg', dailyPercent: 7 },
+    { name: 'Cholesterol', amount: 85, unit: 'mg', dailyPercent: 28 },
+    { name: 'Vitamin B6', amount: 1.3, unit: 'mg', dailyPercent: 65 },
+    { name: 'Iron', amount: 1.4, unit: 'mg', dailyPercent: 8 },
+  ],
+};
